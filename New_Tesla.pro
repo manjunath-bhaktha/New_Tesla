@@ -1,5 +1,7 @@
 QT += qml quick multimedia webenginequick
 
+TARGET = newtesla
+
 CONFIG += c++11
 
 # The following define makes your compiler emit warnings if you use
@@ -28,9 +30,15 @@ QML_IMPORT_PATH =
 QML_DESIGNER_IMPORT_PATH =
 
 # Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
-!isEmpty(target.path): INSTALLS += target
+# qnx: target.path = /tmp/$${TARGET}/bin
+# else: unix:!android: target.path = /opt/$${TARGET}/bin
+# !isEmpty(target.path): INSTALLS += target
+
+target.path = /usr/bin
+target.files += $${OUT_PWD}/$${TARGET}
+target.CONFIG = no_check_exist executable
+
+INSTALLS += target
 
 DISTFILES +=
 
