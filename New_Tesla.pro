@@ -17,7 +17,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         PlaylistWrapper.cpp \
-        VolumeController.cpp \
         livecamera.cpp \
         main.cpp
 
@@ -44,5 +43,4 @@ DISTFILES +=
 
 HEADERS += \
     PlaylistWrapper.h \
-    VolumeController.h \
     livecamera.h
